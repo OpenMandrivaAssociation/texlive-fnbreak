@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/fnbreak
+# catalog-date 2007-01-04 00:44:01 +0100
+# catalog-license lppl
+# catalog-version 1.10
 Name:		texlive-fnbreak
 Version:	1.10
 Release:	1
@@ -48,6 +54,7 @@ pages, and writes a warning to the log file.
 %doc %{_texmfdistdir}/source/latex/fnbreak/Makefile
 %doc %{_texmfdistdir}/source/latex/fnbreak/fnbreak.dtx
 %doc %{_texmfdistdir}/source/latex/fnbreak/fnbreak.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,3 +65,5 @@ pages, and writes a warning to the log file.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
