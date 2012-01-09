@@ -1,12 +1,12 @@
-# revision 15878
+# revision 25003
 # category Package
 # catalog-ctan /macros/latex/contrib/fnbreak
-# catalog-date 2007-01-04 00:44:01 +0100
+# catalog-date 2012-01-02 14:24:13 +0100
 # catalog-license lppl
-# catalog-version 1.10
+# catalog-version 1.30
 Name:		texlive-fnbreak
-Version:	1.10
-Release:	2
+Version:	1.30
+Release:	1
 Summary:	Warn for split footnotes
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fnbreak
@@ -35,13 +35,13 @@ pages, and writes a warning to the log file.
 %files
 %{_texmfdistdir}/tex/latex/fnbreak/fnbreak.sty
 %doc %{_texmfdistdir}/doc/latex/fnbreak/ChangeLog
+%doc %{_texmfdistdir}/doc/latex/fnbreak/Makefile
 %doc %{_texmfdistdir}/doc/latex/fnbreak/README
 %doc %{_texmfdistdir}/doc/latex/fnbreak/fnbreak-v.tex
 %doc %{_texmfdistdir}/doc/latex/fnbreak/fnbreak.pdf
 %doc %{_texmfdistdir}/doc/latex/fnbreak/fnbreak.xml
 %doc %{_texmfdistdir}/doc/latex/fnbreak/fnbreaktest.tex
 #- source
-%doc %{_texmfdistdir}/source/latex/fnbreak/Makefile
 %doc %{_texmfdistdir}/source/latex/fnbreak/fnbreak.dtx
 %doc %{_texmfdistdir}/source/latex/fnbreak/fnbreak.ins
 
