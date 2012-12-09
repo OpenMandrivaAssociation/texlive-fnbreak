@@ -54,3 +54,21 @@ pages, and writes a warning to the log file.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Mon Jan 09 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.30-1
++ Revision: 758880
+- Update to latest upstream release
+
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.10-2
++ Revision: 752000
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.10-1
++ Revision: 718470
+- texlive-fnbreak
+- texlive-fnbreak
+- texlive-fnbreak
+- texlive-fnbreak
+
