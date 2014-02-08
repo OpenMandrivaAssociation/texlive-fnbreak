@@ -6,7 +6,7 @@
 # catalog-version 1.30
 Name:		texlive-fnbreak
 Version:	1.30
-Release:	1
+Release:	2
 Summary:	Warn for split footnotes
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fnbreak
