@@ -1,6 +1,6 @@
 Name:		texlive-fnbreak
 Version:	25003
-Release:	1
+Release:	2
 Summary:	Warn for split footnotes
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fnbreak
