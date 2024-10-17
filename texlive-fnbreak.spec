@@ -3,7 +3,7 @@ Version:	25003
 Release:	2
 Summary:	Warn for split footnotes
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fnbreak
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/fnbreak
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fnbreak.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fnbreak.doc.r%{version}.tar.xz
