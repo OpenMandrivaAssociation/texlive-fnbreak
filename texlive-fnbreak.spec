@@ -1,51 +1,24 @@
-Name:		texlive-fnbreak
-Version:	25003
-Release:	2
+%global tl_name fnbreak
+%global tl_revision 77682
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.40
+Release:	%{tl_revision}.1
 Summary:	Warn for split footnotes
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/fnbreak
-License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fnbreak.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fnbreak.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fnbreak.source.r%{version}.tar.xz
+License:	lppl1.3c
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/fnbreak.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/fnbreak.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/fnbreak.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-This package detects footnotes that are split over several
-pages, and writes a warning to the log file.
+This package detects footnotes that are split over several pages, and
+writes a warning to the log file.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/fnbreak/fnbreak.sty
-%doc %{_texmfdistdir}/doc/latex/fnbreak/ChangeLog
-%doc %{_texmfdistdir}/doc/latex/fnbreak/Makefile
-%doc %{_texmfdistdir}/doc/latex/fnbreak/README
-%doc %{_texmfdistdir}/doc/latex/fnbreak/fnbreak-v.tex
-%doc %{_texmfdistdir}/doc/latex/fnbreak/fnbreak.pdf
-%doc %{_texmfdistdir}/doc/latex/fnbreak/fnbreak.xml
-%doc %{_texmfdistdir}/doc/latex/fnbreak/fnbreaktest.tex
-#- source
-%doc %{_texmfdistdir}/source/latex/fnbreak/fnbreak.dtx
-%doc %{_texmfdistdir}/source/latex/fnbreak/fnbreak.ins
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
